@@ -1,0 +1,39 @@
+{
+  "name": "techtrack-frontend-applications",
+  "version": "1.0.0",
+  "description": "*Insert picture/gif of full project UI*\r ## 📂 Assignment\r *Assignment explanation*",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoenHaagsma/TechTrack-Frontend-Applications.git"
+  },
+  "author": "Koen Haagsma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KoenHaagsma/TechTrack-Frontend-Applications/issues"
+  },
+  "homepage": "https://github.com/KoenHaagsma/TechTrack-Frontend-Applications#readme",
+  "dependencies": {
+    "d3": "^7.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
