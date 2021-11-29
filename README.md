@@ -1,8 +1,8 @@
-# ⚙ Project name
-
+# ⚙ TechTrack Frontend Applications
 *Insert picture/gif of full project UI*
+
 ## 📂 Assignment
-*Assignment explanation*
+The assignment is to create a client-side application in Javascript which dynamically renders data to views using either a front-end framework or system created by me.
 
 ## 🧾 Table of contents
 -   [About the project](##About-the-project)
@@ -15,13 +15,13 @@
 -   [License](##License)
 
 ## 📖 About the project
-*Tell where the project is about*
+The project consists of an implementation of D3 in React and im using React to route and the project is mostly used the get me an understanding of React
 
 ## 🛠 Built with
-*Where is the application made with*
+The application is made with React and D3 and using React-scripts to setup the dev. environment and to built the application.
 
 ## 🔍 Getting started
-*Before you can start you need to follow the installation*
+Before you can start you need to follow the installation.
 
 ## 🔨 Installation
 1. Open the terminal, or use the terminal in your IDE
@@ -40,16 +40,19 @@ npm install || npm i
 ```
 5. Start the application for development
 ```
-npm run dev
+npm run start
 ```
-6. Open de server and go to the browser: [Localhost](http://localhost:3000/). If this doesn't work change your port to another port
-
+6. Open de server and go to the browser: [Localhost](http://localhost:3000/).
 ## 🧰 Packages/dependecies
 
 ### 🧱 Dependecies
-- [Package name]()
+- [D3](https://www.npmjs.com/package/d3)
+- [React](https://www.npmjs.com/package/react)
+- [React-com](https://www.npmjs.com/package/react-dom)
+- [React-scripts](https://www.npmjs.com/package/react-scripts)
+
 ### 🧱 Dev dependecies
-- [Package name]()
+- [Testing Library](https://testing-library.com/)
 
 ## 📑 Sources
 - [Bronnen]()
