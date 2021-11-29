@@ -1,6 +1,6 @@
-# ⚙ Project name
-
+# ⚙ TechTrack Frontend Applications
 *Insert picture/gif of full project UI*
+
 ## 📂 Assignment
 *Assignment explanation*
 
@@ -40,7 +40,7 @@ npm install || npm i
 ```
 5. Start the application for development
 ```
-npm run dev
+npm run start
 ```
 6. Open de server and go to the browser: [Localhost](http://localhost:3000/). If this doesn't work change your port to another port
 
