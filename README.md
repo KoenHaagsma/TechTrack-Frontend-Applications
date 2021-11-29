@@ -42,8 +42,7 @@ npm install || npm i
 ```
 npm run start
 ```
-6. Open de server and go to the browser: [Localhost](http://localhost:3000/). If this doesn't work change your port to another port
-
+6. Open de server and go to the browser: [Localhost](http://localhost:3000/).
 ## 🧰 Packages/dependecies
 
 ### 🧱 Dependecies
