@@ -18,7 +18,7 @@ The assignment is to create a client-side application in Javascript which dynami
 The project consists of an implementation of D3 in React and im using React to route and the project is mostly used the get me an understanding of React
 
 ## 🛠 Built with
-The application is made with React and D3.
+The application is made with React and D3 and using React-scripts to setup the dev. environment and to built the application.
 
 ## 🔍 Getting started
 Before you can start you need to follow the installation.
