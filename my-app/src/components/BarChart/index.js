@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import useD3 from '../../hooks/useD3';
 
-//asdfasdasdf
+//asdfasdasdfwertwert
 
 function BarChart({ data }) {
     const ref = useD3(
