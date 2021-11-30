@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import React from 'react';
 import BarChart from './components/BarChart/index.js';
 import Input from './components/Input/index.js';
 import Label from './components/Label/index.js';
 import { characterDetails } from './getCharacter';
 
-// test
-
 function App() {
     let firstGenerationPokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=10';
 
-    const [pokemonData, setPokemonData] = useState(null);
+    const [pokemonData, setPokemonData] = useState(0);
     useEffect(() => {
         getData(firstGenerationPokeURL);
         // eslint-disable-next-line
@@ -31,15 +30,16 @@ function App() {
         console.log(value1);
         firstGenerationPokeURL = `https://pokeapi.co/api/v2/pokemon?limit=${value1}`;
         getData(firstGenerationPokeURL);
+        App.forceUpdate();
     }
 
     return (
         <div className="App">
             <h1>Pokemon Height/Weight comparison</h1>
             <form onSubmit={handleURL}>
-                <Label name="Value" value={`Select a value`}></Label>
+                <Label name="Value" value={`Max value`}></Label>
                 <br></br>
-                <Input name="first-value" min="1"></Input>
+                <Input name="first-value" min="1" max="30"></Input>
                 <button type="submit">Submit</button>
             </form>
             {pokemonData && <BarChart data={pokemonData}></BarChart>}
