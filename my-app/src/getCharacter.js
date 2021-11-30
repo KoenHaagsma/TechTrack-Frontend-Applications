@@ -1,5 +1,6 @@
-import { fetchData } from './fetch';
+import { fetchData } from './fetch.js';
 
+// Refactor:
 function characterDetails(url) {
     const newArray = [];
     const promises = [];
