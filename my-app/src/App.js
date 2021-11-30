@@ -8,12 +8,13 @@ import { characterDetails } from './getCharacter';
 // test
 
 function App() {
-    let firstGenerationPokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=14';
+    let firstGenerationPokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=10';
 
     const [pokemonData, setPokemonData] = useState(null);
     useEffect(() => {
         getData(firstGenerationPokeURL);
-    }, [firstGenerationPokeURL]);
+        // eslint-disable-next-line
+    }, []);
 
     useEffect(() => {
         console.log(pokemonData);
@@ -26,7 +27,9 @@ function App() {
 
     function handleURL(e) {
         e.preventDefault();
-        firstGenerationPokeURL = `https://pokeapi.co/api/v2/pokemon?limit=${e.target[0].value}&offset=${e.target[1].value}`;
+        let value1 = e.target[0].value;
+        console.log(value1);
+        firstGenerationPokeURL = `https://pokeapi.co/api/v2/pokemon?limit=${value1}`;
         getData(firstGenerationPokeURL);
     }
 
@@ -34,10 +37,9 @@ function App() {
         <div className="App">
             <h1>Pokemon Height/Weight comparison</h1>
             <form onSubmit={handleURL}>
-                <Label name="Value" value={`Select a value between 1 and 20`}></Label>
+                <Label name="Value" value={`Select a value`}></Label>
                 <br></br>
                 <Input name="first-value" min="1"></Input>
-                <Input name="second-value" min="1"></Input>
                 <button type="submit">Submit</button>
             </form>
             {pokemonData && <BarChart data={pokemonData}></BarChart>}
