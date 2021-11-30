@@ -50,6 +50,7 @@ npm run start
 - [React](https://www.npmjs.com/package/react)
 - [React-com](https://www.npmjs.com/package/react-dom)
 - [React-scripts](https://www.npmjs.com/package/react-scripts)
+- [Styled Components](https://styled-components.com/)
 
 ### 🧱 Dev dependecies
 - [Testing Library](https://testing-library.com/)
