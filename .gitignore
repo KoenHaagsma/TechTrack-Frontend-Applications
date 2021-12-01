@@ -6,6 +6,7 @@
 /second_app
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
