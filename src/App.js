@@ -14,7 +14,6 @@ function App() {
     useEffect(() => {
         // getData(firstGenerationPokeURL);
         characterDetails(firstGenerationPokeURL).then((d) => {
-            console.log(d);
             setPokemonData(d);
         });
         // eslint-disable-next-line
