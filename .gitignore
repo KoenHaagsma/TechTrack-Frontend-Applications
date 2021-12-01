@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/my_app
+/second_app
 /.pnp
 .pnp.js
 
