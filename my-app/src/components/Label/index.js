@@ -2,7 +2,7 @@ function Label(props) {
     const { name, value } = props;
     return (
         <>
-            <label for={name}>{value}</label>
+            <label htmlFor={name}>{value}</label>
         </>
     );
 }

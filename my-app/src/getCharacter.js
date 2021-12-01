@@ -2,26 +2,38 @@ import { fetchData } from './fetch.js';
 
 // Refactor:
 function characterDetails(url) {
-    const newArray = [];
-    const promises = [];
-    return fetchData(url)
-        .then((data) => {
-            const keys = Object.keys(data.results);
-            for (const item of keys) {
-                const p = fetchData(data.results[item].url).then((el) => {
-                    const single = {
-                        name: el.name,
-                        height: el.height / 10, // In meters
-                        weight: el.weight / 10, // in KG
-                    };
-                    newArray.push(single);
-                });
-                promises.push(p);
-            }
-            Promise.all(promises).catch((err) => console.log(err)); // Wait for all promises to complete if one fails, the whole promise fails
-            return newArray;
-        })
-        .catch((err) => console.log(err));
+    // const newArray = [];
+    // const promises = [];
+    return new Promise((resolve) => {
+        fetchData(url)
+            .then((data) => {
+                const promises = Object.values(data.results).map((item) => fetchData(item.url));
+                // for (const item of keys) {
+                //     const p = fetchData(data.results[item].url).then((el) => {
+                //         const single = {
+                //             name: el.name,
+                //             height: el.height / 10, // In meters
+                //             weight: el.weight / 10, // in KG
+                //         };
+                //         // newArray.push(single);
+                //         return single
+                //     });
+                //     promises.push(p);
+                // }
+                return Promise.all(promises)
+                    .then((d) => {
+                        resolve(
+                            d.map((el) => ({
+                                name: el.name,
+                                height: el.height / 10, // In meters
+                                weight: el.weight / 10, // in KG
+                            })),
+                        );
+                    })
+                    .catch((err) => console.log(err));
+            })
+            .catch((err) => console.log(err));
+    });
 }
 
 function getSingleCharacter(array, characterName) {

@@ -1,14 +1,14 @@
 import * as d3 from 'd3';
 import useD3 from '../../hooks/useD3';
 
-//asdfasdasdfwertwert
-
 function BarChart({ data }) {
     const ref = useD3(
         (svg) => {
             const height = 500;
             const width = 1500;
             const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+
+            console.log(data);
 
             const x = d3
                 .scaleBand()

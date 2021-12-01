@@ -1,4 +1,4 @@
-import { useState, useEffect, Component } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import React from 'react';
 import BarChart from './components/BarChart/index.js';
@@ -12,18 +12,22 @@ function App() {
     const [pokemonData, setPokemonData] = useState();
 
     useEffect(() => {
-        getData(firstGenerationPokeURL);
+        // getData(firstGenerationPokeURL);
+        characterDetails(firstGenerationPokeURL).then((d) => {
+            console.log(d);
+            setPokemonData(d);
+        });
         // eslint-disable-next-line
     }, []);
 
-    useEffect(() => {
-        console.log(pokemonData);
-    }, [pokemonData]);
+    // useEffect(() => {
+    //     console.log(pokemonData);
+    // }, [pokemonData]);
 
-    async function getData(pokeURL) {
-        const inputData = await characterDetails(pokeURL);
-        setPokemonData(inputData);
-    }
+    // async function getData(pokeURL) {
+    //     const inputData = await characterDetails(pokeURL);
+    //     setPokemonData(inputData);
+    // }
 
     async function handleURL(e) {
         e.preventDefault();
