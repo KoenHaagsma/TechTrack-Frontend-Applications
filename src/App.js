@@ -40,7 +40,7 @@ function App() {
                 <Input name="first-value" min="1" max="30"></Input>
                 <button type="submit">Submit</button>
             </form>
-            {pokemonData && <BarChart data={pokemonData}></BarChart>}
+            <div className="chart-container">{pokemonData && <BarChart data={pokemonData}></BarChart>}</div>
         </div>
     );
 }
