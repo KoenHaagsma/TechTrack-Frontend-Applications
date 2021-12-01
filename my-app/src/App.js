@@ -20,14 +20,9 @@ function App() {
         // eslint-disable-next-line
     }, []);
 
-    // useEffect(() => {
-    //     console.log(pokemonData);
-    // }, [pokemonData]);
-
-    // async function getData(pokeURL) {
-    //     const inputData = await characterDetails(pokeURL);
-    //     setPokemonData(inputData);
-    // }
+    useEffect(() => {
+        console.log(pokemonData);
+    }, [pokemonData]);
 
     async function handleURL(e) {
         e.preventDefault();
