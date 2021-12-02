@@ -7,7 +7,7 @@ function Header(props) {
         <>
             <StyledHeader>
                 <Title value="Pokemon comparison"></Title>
-                <SubTitle value="Pokemon weight and height comparison chart"></SubTitle>
+                <SubTitle value="Pokemon height (meters) comparison chart"></SubTitle>
             </StyledHeader>
         </>
     );
