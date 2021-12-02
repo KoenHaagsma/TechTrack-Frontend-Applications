@@ -1,8 +1,10 @@
+import { StyledLabel } from './index.styled';
+
 function Label(props) {
     const { name, value } = props;
     return (
         <>
-            <label htmlFor={name}>{value}</label>
+            <StyledLabel htmlFor={name}>{value}</StyledLabel>
         </>
     );
 }

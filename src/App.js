@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import React from 'react';
 import BarChart from './components/BarChart/index.js';
-import Input from './components/Input/index.js';
-import Label from './components/Label/index.js';
+import Header from './compositions/Header/index.js';
+import Form from './compositions/Form/index.js';
 import { characterDetails } from './getCharacter';
 
 function App() {
     let firstGenerationPokeURL = 'https://pokeapi.co/api/v2/pokemon?limit=10';
-
     const [pokemonData, setPokemonData] = useState();
 
     useEffect(() => {
@@ -33,12 +32,9 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Pokemon Height/Weight comparison</h1>
+            <Header></Header>
             <form onSubmit={handleURL}>
-                <Label name="Value" value={`Max value`}></Label>
-                <br></br>
-                <Input name="first-value" min="1" max="30"></Input>
-                <button type="submit">Submit</button>
+                <Form></Form>
             </form>
             <div className="chart-container">{pokemonData && <BarChart data={pokemonData}></BarChart>}</div>
         </div>

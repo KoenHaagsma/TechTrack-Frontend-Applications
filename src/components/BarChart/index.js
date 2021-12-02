@@ -36,7 +36,7 @@ function BarChart({ data }) {
             const y1Axis = (g) =>
                 g
                     .attr('transform', `translate(${margin.left}, 0)`)
-                    .style('color', '#440099')
+                    .style('color', '#4563C9')
                     .call(d3.axisLeft(y1).ticks(null, 's'))
                     .call((g) => g.select('.domain').remove())
                     .call((g) =>
@@ -53,7 +53,7 @@ function BarChart({ data }) {
             svg.select('.y-axis').call(y1Axis);
 
             svg.select('.plot-area')
-                .attr('fill', '#6b09df')
+                .attr('fill', '#4563C9')
                 .selectAll('.bar')
                 .data(data)
                 .join('rect')
@@ -71,9 +71,11 @@ function BarChart({ data }) {
             ref={ref}
             style={{
                 height: 500,
-                width: '100%',
-                marginRight: '0px',
-                marginLeft: '0px',
+                width: 'calc(100% - 1rem)',
+                background: '#F3F8FB',
+                border: '1px solid #E1EDF4',
+                'border-radius': '12px',
+                'margin-top': '0.5rem',
             }}
         >
             <g className="plot-area" />

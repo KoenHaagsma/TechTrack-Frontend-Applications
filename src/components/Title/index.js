@@ -1,12 +1,12 @@
-import { StyleTitle } from './index.styled';
+import { StyledTitle } from './index.styled';
 
-function Label(props) {
+function Title(props) {
     const { value } = props;
     return (
         <>
-            <StyleTitle>{value}</StyleTitle>
+            <StyledTitle>{value}</StyledTitle>
         </>
     );
 }
 
-export default Label;
+export default Title;
